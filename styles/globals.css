@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* section {
+  @apply pt-24;
+} */
+
+.bg_login {
+  -webkit-clip-path: polygon(0 0, 0 100%, 0 100%, 200% 655%, 82% 0);
+  clip-path: polygon(0 0, 0 100%, 0 100%, 200% 655%, 82% 0);
+}
+
+button {
+  @apply rounded-lg px-4 py-1 capitalize font-semibold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  @apply appearance-none m-0;
+}
+
+input[type="number"] {
+  @apply appearance-none;
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-lg py-2 px-5 resize-none appearance-none;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+}
+
+.h1-login {
+  @apply text-4xl font-bold;
+}
+
+.h1-registration {
+  @apply text-5xl font-bold;
+}
+
+.btn-default {
+  @apply text-gray-400 bg-gray-200 transition shadow-lg hover:bg-gray-100;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:bg-secondary transition py-2 text-center shadow-lg shadow-secondary;
+}
+
+.react-datepicker__day--outside-month {
+  @apply !text-gray-400 pointer-events-none;
+}
